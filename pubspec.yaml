@@ -1,0 +1,34 @@
+name: diyalizpro_mobile
+description: DiyalizPro Professional Clinical Management Mobile App
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_inappwebview: ^6.0.0
+  onesignal_flutter: ^5.0.0
+  connectivity_plus: ^5.0.0
+  shared_preferences: ^2.2.0
+  url_launcher: ^6.1.10
+  flutter_native_splash: ^2.3.0
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/logo.png
+    - assets/images/splash.png
+
+flutter_native_splash:
+  color: "#0A2540"
+  image: assets/images/splash.png
+  android: true
+  ios: true
