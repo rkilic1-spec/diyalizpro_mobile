@@ -1,18 +1,1 @@
-name: Build
-on:
-  workflow_dispatch:
-  jobs:
-    build:
-        runs-on: ubuntu-latest
-            steps:
-                  - uses: actions/checkout@v4
-                        - uses: subosito/flutter-action@v2
-                                with:
-                                          channel: 'stable'
-                                                - run: flutter pub get
-                                                      - run: flutter build apk --release --no-tree-shake-icons
-                                                            - uses: actions/upload-artifact@v4
-                                                                    with:
-                                                                              name: APK
-                                                                                        path: build/app/outputs/flutter-apk/app-release.apk
-                                                                                        
+name: Build\r\n\b\b\b\b\b\b\b\b\bon: workflow_dispatch\r\n\b\b\b\b\b\b\b\b\bjobs:\r\n\b\b\b\b\b\b\b\b\b  build:\r\n\b\b\b\b\b\b\b\b\b    runs-on: ubuntu-latest\r\n\b\b\b\b\b\b\b\b\b    steps:\r\n\b\b\b\b\b\b\b\b\b      - uses: actions/checkout@v4\r\n\b\b\b\b\b\b\b\b\b      - uses: subosito/flutter-action@v2\r\n\b\b\b\b\b\b\b\b\b        with:\r\n\b\b\b\b\b\b\b\b\b          channel: 'stable'\r\n\b\b\b\b\b\b\b\b\b      - run: flutter pub get\r\n\b\b\b\b\b\b\b\b\b      - run: flutter build apk --release --no-tree-shake-icons\r\n\b\b\b\b\b\b\b\b\b      - uses: actions/upload-artifact@v4\r\n\b\b\b\b\b\b\b\b\b        with:\r\n\b\b\b\b\b\b\b\b\b          name: APK\r\n\b\b\b\b\b\b\b\b\b          path: build/app/outputs/flutter-apk/app-release.apk
